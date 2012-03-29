@@ -5,9 +5,23 @@
   +border-radius(20px)
   +opacity(0.5)
 
+$default-font-size: 12px
+
+=font-sizing($size: $default-font-size)
+  font-size: $size
+  line-height: 1.5 * $size
+  margin-bottom: 1.5 * $size
+
 html, body
   background-color: black
   font-family: "Abadi MT W02 Exra Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif
+  +font-sizing
+
+h1
+  +font-sizing(24px)
+
+p, ol, ul, blockquote, pre, code
+  +font-sizing(16px)
 
 .page
   margin-top: 140px
@@ -20,6 +34,10 @@ html, body
     +box-shadow(#70829A 0px 0px 50px)
 
 .gallery
-  display: hidden
+  display: none
 
-
+.footer
+  +font-sizing(10px)
+  text-align: center
+  margin-top: 10px
+  color: white
