@@ -12,6 +12,9 @@ $default-font-size: 12px
   line-height: 1.5 * $size
   margin-bottom: 1.5 * $size
 
+=page
+  display: none
+
 html, body
   background-color: black
   font-family: "Abadi MT W02 Exra Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -23,21 +26,21 @@ h1
 p, ol, ul, blockquote, pre, code
   +font-sizing(16px)
 
-.page
-  margin-top: 140px
+.site
+  margin-top: 80px
 
 .visual
   text-align: center
   img
-    cursor: pointer
     +border-radius(20px)
     +box-shadow(#70829A 0px 0px 50px)
 
-.gallery
-  display: none
+#about, #tattoos, #paintings, #news, #contact
+  +page
 
 .footer
   +font-sizing(10px)
   text-align: center
   margin-top: 10px
   color: white
+  letter-spacing: 1px
