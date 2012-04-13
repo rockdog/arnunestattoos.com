@@ -1,0 +1,14 @@
+- content_for(:title) do
+  Paintings
+
+- content_for(:js) do
+  :javascript
+    $(document).ready(function() {
+      Site.detectDevice();
+      if ( !$('html').hasClass('phone') ) {
+        Site.showCurrentPage();
+      }
+    });
+
+%h1 Paintings
+%p Please check back soon for a major update of this website.
